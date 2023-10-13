@@ -1,0 +1,121 @@
+\section{Question 1}
+\subsection{a}
+Illustrate the use of the Gauss reduction in obtaining the general solution of the following set of equations:
+
+\begin{align}
+	2x_1 + x_3 &= 4 \label{eq:I1} \\
+	x_1 - 2x_2 + 2x_3 &= 7 \label{eq:I2} \\
+	3x_1 + 2x_2 &= 1 \label{eq:I3}
+\end{align}
+
+We can solve this system using Gaussian elimination to obtain the general solution:
+
+\begin{align*}
+	2x_1 + 0x_2 + x_3 &= 4 \tag{1'} \\
+	0x_1 + x_2 - \frac{1}{2}x_3 &= -\frac{5}{2} \tag{2'} \\
+	0x_1 + 0x_2 + 0x_3 &= 0 \tag{3'}
+\end{align*}
+
+Now, we can express the solutions as follows:
+
+\begin{align*}
+	x_3 &= t \quad \text{(a free parameter)} \\
+	x_2 &= -\frac{5}{2} + \frac{1}{2}t \\
+	x_1 &= 2 - \frac{1}{2}t
+\end{align*}
+
+So, the general solution to the system of equations \eqref{eq:I1}, \eqref{eq:I2}, and \eqref{eq:I3} is:
+\[
+x_1 = 2 - \frac{1}{2}t, \quad x_2 = -\frac{5}{2} + \frac{1}{2}t, \quad x_3 = t
+\]
+
+\subsection{b}
+Illustrate the use of the Gauss reduction in obtaining the general solution of the following set of equations:
+
+\begin{align}
+	2x_1 - x_2 &= 6 \label{eq:II1} \\
+	-x_1 + 3x_2 - 2x_3 &= 1 \label{eq:II2} \\
+	-2x_2 + 4x_3 - 3x_4 &= -2 \label{eq:II3} \\
+	-3x_3 + 5x_4 &= 1 \label{eq:II4}
+\end{align}
+
+We will solve this system using Gaussian elimination to obtain the general solution.
+
+Step 1: Start with the augmented matrix for the system:
+
+\[
+\begin{bmatrix}
+	2 & -1 & 0 & 0 & 6 \\
+	-1 & 3 & -2 & 0 & 1 \\
+	0 & -2 & 4 & -3 & -2 \\
+	0 & 0 & -3 & 5 & 1
+\end{bmatrix}
+\]
+
+Step 2: Apply row operations to transform the matrix into upper triangular form.
+
+First, let's eliminate the x1 coefficient in the second row:
+
+Multiply the first row by 1/2 and add it to the second row:
+\[
+\begin{bmatrix}
+	2 & -1 & 0 & 0 & 6 \\
+	0 & 7/2 & -1 & 0 & 7/2 \\
+	0 & -2 & 4 & -3 & -2 \\
+	0 & 0 & -3 & 5 & 1
+\end{bmatrix}
+\]
+
+Next, let's eliminate the x2 coefficient in the third row:
+
+Multiply the second row by 4/7 and add it to the third row:
+\[
+\begin{bmatrix}
+	2 & -1 & 0 & 0 & 6 \\
+	0 & 7/2 & -1 & 0 & 7/2 \\
+	0 & 0 & 6/7 & -3/7 & -6/7 \\
+	0 & 0 & -3 & 5 & 1
+\end{bmatrix}
+\]
+
+Now, eliminate the x3 coefficient in the fourth row:
+
+Multiply the third row by -7/6 and add it to the fourth row:
+\[
+\begin{bmatrix}
+	2 & -1 & 0 & 0 & 6 \\
+	0 & 7/2 & -1 & 0 & 7/2 \\
+	0 & 0 & 6/7 & -3/7 & -6/7 \\
+	0 & 0 & 0 & 20/7 & 19/7
+\end{bmatrix}
+\]
+
+Step 3: Back-substitution to find the solutions.
+
+From the last row, we find:
+\[ \frac{20}{7}x_4 = \frac{19}{7} \]
+Solving for x4:
+\[ x_4 = \frac{19}{20} \]
+
+Now, we can back-substitute to find the values of x3, x2, and x1. Start from the third row:
+
+\[ \frac{6}{7}x_3 - \frac{3}{7}x_4 = -\frac{6}{7} \left(\frac{19}{20}\right) + \frac{3}{7} \left(\frac{19}{20}\right) = -\frac{1}{4} \]
+Solving for x3:
+\[ x_3 = -\frac{1}{4} \cdot \frac{7}{6} = -\frac{7}{24} \]
+
+Now, proceed to the second row:
+
+\[ \frac{7}{2}x_2 - x_3 = \frac{7}{2} \left(-\frac{7}{24}\right) + \frac{1}{4} = -\frac{13}{24} \]
+Solving for x2:
+\[ x_2 = -\frac{13}{24} \cdot \frac{2}{7} = -\frac{13}{42} \]
+
+Finally, solve for x1 using the first row:
+
+\[ 2x_1 - x_2 = 6 \]
+\[ 2x_1 = 6 + x_2 = 6 - \frac{13}{42} \]
+Solving for x1:
+\[ x_1 = \frac{6}{2} - \frac{13}{42} = \frac{3}{1} - \frac{13}{42} = \frac{131}{42} \]
+
+The general solution for the system of equations \eqref{eq:II1}, \eqref{eq:II2}, \eqref{eq:II3}, and \eqref{eq:II4} is:
+\[ x_1 = \frac{131}{42}, \quad x_2 = -\frac{13}{42}, \quad x_3 = -\frac{7}{24}, \quad x_4 = \frac{19}{20} \]
+

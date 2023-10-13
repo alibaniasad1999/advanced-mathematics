@@ -1,0 +1,38 @@
+\section{Question 2}
+If \( A \) and \( B \) are \( n \times n \) matrices, under what conditions is the following relation true:
+
+\[
+(A + B)(A - B) = A^2 - B^2
+\]
+
+To understand when this relation holds, let's expand the left-hand side:
+
+\[
+(A + B)(A - B) = A^2 - AB + BA - B^2
+\]
+
+Now, for the relation \( A^2 - B^2 \) to be equal to \( A^2 - AB + BA - B^2 \), it must be true that \( AB = BA \). This condition holds if and only if matrices \( A \) and \( B \) commute, i.e., \( AB = BA \) for all \( n \times n \) matrices \( A \) and \( B \).
+
+Example where the relation does not hold:
+
+Consider the matrices
+
+\[
+A = \begin{bmatrix}
+	1 & 2 \\
+	3 & 4
+\end{bmatrix}
+\]
+
+and
+
+\[
+B = \begin{bmatrix}
+	5 & 6 \\
+	7 & 8
+\end{bmatrix}
+\]
+
+Here, \( A^2 = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \times \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} = \begin{bmatrix} 7 & 10 \\ 15 & 22 \end{bmatrix} \) and \( B^2 = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix} \times \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix} = \begin{bmatrix} 59 & 70 \\ 83 & 98 \end{bmatrix} \).
+
+However, \( (A + B)(A - B) = \begin{bmatrix} 6 & 8 \\ 10 & 12 \end{bmatrix} \times \begin{bmatrix} -4 & -4 \\ -4 & -4 \end{bmatrix} = \begin{bmatrix} -32 & -32 \\ -32 & -32 \end{bmatrix} \) which is not equal to \( A^2 - B^2 \).
