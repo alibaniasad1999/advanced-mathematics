@@ -1,0 +1,56 @@
+\section{Question 4}
+\subsection{a}
+Let $A$ and $B$ be diagonal matrices of order $n$. A diagonal matrix is a matrix in which all off-diagonal elements are zero. Therefore, $A$ and $B$ can be represented as:
+
+\[
+A = \begin{bmatrix}
+a_1 & 0 & 0 & \ldots & 0 \\
+0 & a_2 & 0 & \ldots & 0 \\
+0 & 0 & a_3 & \ldots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \ldots & a_n
+\end{bmatrix}
+\]
+
+\[
+B = \begin{bmatrix}
+b_1 & 0 & 0 & \ldots & 0 \\
+0 & b_2 & 0 & \ldots & 0 \\
+0 & 0 & b_3 & \ldots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \ldots & b_n
+\end{bmatrix}
+\]
+
+Now, let's compute the product $AB$:
+
+\[
+AB = \begin{bmatrix}
+a_1 & 0 & 0 & \ldots & 0 \\
+0 & a_2 & 0 & \ldots & 0 \\
+0 & 0 & a_3 & \ldots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \ldots & a_n
+\end{bmatrix} \cdot
+\begin{bmatrix}
+b_1 & 0 & 0 & \ldots & 0 \\
+0 & b_2 & 0 & \ldots & 0 \\
+0 & 0 & b_3 & \ldots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \ldots & b_n
+\end{bmatrix}
+\]
+
+When you multiply two matrices, the $(i, j)$-th element of the product is given by the dot product of the $i$-th row of the first matrix and the $j$-th column of the second matrix. In this case, since $A$ and $B$ are diagonal matrices, the only non-zero elements of the product $AB$ will be on the diagonal, and they will be the product of the corresponding elements of $A$ and $B$.
+
+So, for the product $AB$, the $(i, i)$-th element will be $a_i \cdot b_i$ and all other elements will be zero. Therefore, $AB$ is also a diagonal matrix, and the $(i, j)$-th element is zero for $i \neq j$.
+\subsection{b}
+To prove that $BA = AB$, we can use the commutative property of multiplication for diagonal matrices. Since $A$ and $B$ are both diagonal matrices, the order in which they are multiplied does not affect the result. Therefore, $BA = AB$.
+
+This can be stated formally as:
+
+\[
+AB = BA
+\]
+
+So, the product of two diagonal matrices is commutative.
