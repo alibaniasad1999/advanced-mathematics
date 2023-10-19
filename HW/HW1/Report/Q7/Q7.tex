@@ -1,0 +1,48 @@
+\section{Question 7}
+\begin{proof}
+    To prove that the inverse of a nonsingular diagonal matrix $D = [d_{ij}]$ is given by $D^{-1} = [1/\delta_{ij}] \cdot d_i$, where $\delta_{ij}$ is a function that is 1 if the variables $i$ and $j$ are equal, and 0 otherwise, we can follow these steps:
+    
+    1. First, let's establish that the product of $D$ and $D^{-1}$ results in the identity matrix $I$:
+    
+    \[
+    DD^{-1} = I
+    \]
+    
+    2. Now, we'll compute the product $DD^{-1}$:
+    
+    \[
+    DD^{-1} = [d_{ij}][1/\delta_{ij}] \cdot d_i
+    \]
+    
+    3. The product of $d_{ij}$ and $1/\delta_{ij}$ will be 1 if $i = j$ and 0 otherwise, according to the definition of $\delta_{ij}$. So, we have:
+    
+    \[
+    DD^{-1} = [d_{ij}][1/\delta_{ij}] \cdot d_i = \delta_{ij} \cdot d_i = \begin{cases}
+    d_i, & \text{if } i = j \\
+    0, & \text{if } i \neq j
+    \end{cases}
+    \]
+    
+    4. Now, we can observe that the result is a diagonal matrix where all the diagonal elements are given by $d_i$ when $i = j$, and 0 when $i \neq j$. This is the definition of a diagonal matrix. So, $DD^{-1}$ is indeed a diagonal matrix.
+    
+    5. To determine the specific values on the diagonal, we can express the $DD^{-1}$ matrix explicitly:
+    
+    \[
+    DD^{-1} = \begin{bmatrix}
+    d_1 & 0 & 0 & \cdots & 0 \\
+    0 & d_2 & 0 & \cdots & 0 \\
+    0 & 0 & d_3 & \cdots & 0 \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    0 & 0 & 0 & \cdots & d_n
+    \end{bmatrix}
+    \]
+    
+    6. We have now shown that $DD^{-1}$ is a diagonal matrix with the diagonal elements being the values from the original diagonal matrix $D$.
+    
+    7. For $DD^{-1}$ to be equal to the identity matrix $I$, all diagonal elements must be 1. Therefore, $d_i$ must be equal to 1 for all $i$.
+    
+    8. Thus, $D^{-1}$ is given by $D^{-1} = [1/\delta_{ij}] \cdot d_i$, where $\delta_{ij}$ is the function you described that is 1 if $i = j$ and 0 otherwise.
+    
+    This completes the proof that the inverse of a nonsingular diagonal matrix $D$ is given by $D^{-1} = [1/\delta_{ij}] \cdot d_i$ under the specified conditions.
+    \end{proof}
+    

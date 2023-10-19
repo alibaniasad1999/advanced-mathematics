@@ -1,0 +1,67 @@
+\section{Question 6}
+\subsection{a}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\begin{theorem}
+Let $A = [a_{ij}]$ be a matrix where $a_{ij} = r_i s_j$. Then, the rank of $A$ is one or zero.
+\end{theorem}
+
+\begin{proof}
+Show that the rank of $A$ is at most one.
+
+Suppose that $A$ has rank two or higher. Then, there exists a set of two or more linearly independent rows of $A$. This means that these rows cannot be expressed as linear combinations of each other. However, since each row of $A$ is of the form $[r_i s_1, r_i s_2, \ldots, r_i s_n]$, this is impossible. Therefore, the rank of $A$ must be at most one.
+
+Show that the rank of $A$ is zero if and only if all of the $r_i$ and $s_j$ are equal to zero.
+
+Suppose that the rank of $A$ is zero. Then, all of the rows of $A$ are linearly dependent. This means that one row of $A$ can be expressed as a linear combination of the other rows. However, since each row of $A$ is of the form $[r_i s_1, r_i s_2, \ldots, r_i s_n]$, this is only possible if all of the $r_i$ and $s_j$ are equal to zero.
+
+Conversely, suppose that all of the $r_i$ and $s_j$ are equal to zero. Then, all of the rows of $A$ are equal to the zero vector. This means that the rank of $A$ is zero.
+
+Therefore, we have shown that the rank of the matrix $A = [a_{ij}]$, where $a_{ij} = r_i s_j$, is one or zero.
+
+\end{proof}
+
+\subsection{b}
+\begin{proof}
+    Let $A = [a_{ij}]$ be a rank-one matrix. This means that there exists a non-zero column vector $\mathbf{s}$ and a non-zero row vector $\mathbf{r}$ such that $A = \mathbf{r} \mathbf{s}^T$.
+    
+    Since $\mathbf{r}$ is a non-zero row vector, there must exist at least one non-zero entry in $\mathbf{r}$. Let $r_i$ be the non-zero entry in $\mathbf{r}$ with the largest index.
+    
+    Similarly, since $\mathbf{s}$ is a non-zero column vector, there must exist at least one non-zero entry in $\mathbf{s}$. Let $\mathbf{s_j}$ be the non-zero entry in $\mathbf{s}$ with the largest index.
+    
+    We can now write $A$ as follows:
+    \[
+    A = \mathbf{r} \mathbf{s}^T = \begin{bmatrix}
+    r_1 \\
+    r_2 \\
+    \vdots \\
+    r_i \\
+    \vdots \\
+    r_m
+    \end{bmatrix} \begin{bmatrix}
+    s_1 & s_2 & \cdots & s_j & \cdots & s_n
+    \end{bmatrix}
+    \]
+    
+    Notice that all entries in $\mathbf{r}$ and $\mathbf{s}$ outside of $r_i$ and $s_j$ are equal to zero. Therefore, $A$ can be expressed as the product of the non-zero entries $r_i$ and $s_j$ as follows:
+    \[
+    A = \begin{bmatrix}
+    0 \\
+    0 \\
+    \vdots \\
+    r_i \\
+    \vdots \\
+    0
+    \end{bmatrix} \begin{bmatrix}
+    0 & 0 & \cdots & 0 & \cdots & s_j
+    \end{bmatrix} = r_i s_j
+    \]
+    
+    Hence, we have shown that a rank-one matrix $A$ can be written as $A = r_i s_j$.
+    \end{proof}
+    
+
+        
+    
+    
