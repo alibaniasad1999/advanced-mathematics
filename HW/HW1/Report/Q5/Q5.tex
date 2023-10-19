@@ -1,2 +1,48 @@
+\section{Question 5}
+\subsection{a}
 
+
+To show that the set of equations
+\begin{align*}
+2x_1 - 2x_2 + x_3 &= \lambda x_1 \\
+2x_1 - 3x_2 + 2x_3 &= \lambda x_2 \\
+-x_1 + 2x_2 &= \lambda x_3
+\end{align*}can only possess a nontrivial solution if $\lambda = 1$ or $\lambda = -3$, we can use the following steps:
+
+1. Write the system of equations in augmented matrix form:
+\[\begin{pmatrix} 2-\lambda & -2 & 1 \\ 2 & -3+\lambda & 2 \\ -1 & 2 & -\lambda \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}\]
+2. Reduce the augmented matrix to row echelon form:
+\[\begin{pmatrix} 1 & 0 & \frac{1}{3} \\ 0 & 1 & -\frac{2}{3} \\ 0 & 0 & 0 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}\]
+3. The last row of the row echelon form is zero, so the system of equations has infinitely many solutions.
+4. In order for the system of equations to have a nontrivial solution, we must have $\lambda = 1$ or $\lambda = -3$.
+
+\subsection{b}
+
+To obtain the general solution in each case, we can use the following steps:
+
+1. Case $\lambda = 1$:
+
+The system of equations becomes
+\begin{align*}
+x_1 - x_2 + x_3 &= x_1 \\
+2x_1 - 3x_2 + 2x_3 &= x_2 \\
+-x_1 + 2x_2 &= x_3
+\end{align*}Subtracting the first equation from the second equation, we get
+\[x_2 - x_3 = 0\]This means that $x_2 = x_3$. Substituting this into the third equation, we get
+\[-x_1 + 2x_2 = x_2\]This means that $x_1 = x_2$. Therefore, the general solution in this case is
+\[(x_1, x_2, x_3) = (t, t, t)\]where $t$ is any real number.
+
+2. Case $\lambda = -3$:
+
+The system of equations becomes
+\begin{align*}
+5x_1 - 2x_2 + x_3 &= -3x_1 \\
+2x_1 - 6x_2 + 2x_3 &= -3x_2 \\
+-x_1 + 2x_2 &= -3x_3
+\end{align*}Adding the first equation to the second equation, we get
+\[7x_1 - 8x_2 + 3x_3 = 0\]Dividing both sides by 7, we get
+\[x_1 - \frac{8}{7}x_2 + \frac{3}{7}x_3 = 0\]Subtracting this equation from the third equation, we get
+\[-\frac{15}{7}x_3 = 0\]This means that $x_3 = 0$. Substituting this into the second equation, we get
+\[2x_1 - 6x_2 = 0\]This means that $x_2 = \frac{1}{3}x_1$. Therefore, the general solution in this case is
+\[(x_1, x_2, x_3) = \left( t, \frac{1}{3}t, 0 \right)\]where $t$ is any real number.
 
